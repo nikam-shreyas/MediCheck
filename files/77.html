@@ -1,0 +1,51 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Symptom/History</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <h4 class='bg-light text-primary p-3'>
+What is the amount of sputum produced with cough (or suction from endotracheal tube if patient is intubated)?
+</h4>
+        <br>
+    </center>
+    <form>
+        <div class="container mb-3">
+            <div class="form-row">
+                <div class="col-sm-12">
+                    <label class='text-secondary ml-1'>
+I'd like to find out more about your secretions from airways, throat and lungs. Ok? Please one that best describes your case.</label><br /><select class='custom-select' id='fetchFeature'><option value="1" >Data unavailable.</option><option value="2" >I have no mucus production.</option><option value="3" >I have mucus production, rarely.</option><option value="4" >I have mucus production, with each coughing spell bringing some.</option><option value="5" >I have severe mucus production. I bring mouth-full of mucus with each cough spell.</option></select><input type='hidden' id='feature' value='MucousProduction'/>
+</div>
+            </div>
+            <center>
+                <br>
+                <button type="submit" id='updateBtn' class="btn btn-primary">
+                    Add Feature
+                </button>
+            </center>
+        </div>
+    </form>
+    <script src='../popup.js'></script>
+</body>
+
+</html>
+
+

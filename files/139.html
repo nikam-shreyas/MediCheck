@@ -1,0 +1,51 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Symptom/History</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <h4 class='bg-light text-primary p-3'>
+History of pain in the right or left inguinal area?
+</h4>
+        <br>
+    </center>
+    <form>
+        <div class="container mb-3">
+            <div class="form-row">
+                <div class="col-sm-12">
+                    <label class='text-secondary ml-1'>
+Have you had any belly pain or discomfort in the region of right or let groin (to the right or left and downward from the belly button) ?</label><br /><select class='custom-select' id='fetchFeature'><option value="1" >Data unavailable.</option><option value="2" >No.</option><option value="3" >Yes, and the belly pain or discomfort is on and off, when walking, carrying something heavy or exercising. </option><option value="4" >Yes, I have had groin discomfort or pain, constant, lasting for at least couple hours, it is minimal.</option><option value="5" >Yes, I have had groin discomfort or pain, constant, lasting for at least couple hours, it is modersate or severe.</option></select><input type='hidden' id='feature' value='RLInguinalPain'/>
+</div>
+            </div>
+            <center>
+                <br>
+                <button type="submit" id='updateBtn' class="btn btn-primary">
+                    Add Feature
+                </button>
+            </center>
+        </div>
+    </form>
+    <script src='../popup.js'></script>
+</body>
+
+</html>
+
+

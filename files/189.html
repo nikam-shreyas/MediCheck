@@ -1,0 +1,51 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Symptom/History</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <h4 class='bg-light text-primary p-3'>
+Most recent period - in females?
+</h4>
+        <br>
+    </center>
+    <form>
+        <div class="container mb-3">
+            <div class="form-row">
+                <div class="col-sm-12">
+                    <label class='text-secondary ml-1'>
+When did you have your most recent period (applies to females only, pick the longest time that applies)?</label><br /><select class='custom-select' id='fetchFeature'><option value="1" >Data unavailable.</option><option value="2" >My last period occured as it should, regularly.</option><option value="3" >My last period has been late, but not more late than 15 days.</option><option value="4" >I have had no period for the last 45 days.</option><option value="5" >I have had missed at least 2 periods.</option><option value="6" >I have had no period for last year.</option><option value="7" >I have had no period for at least 2 last years.</option><option value="8" >I have had no period ever.</option></select><input type='hidden' id='feature' value='LastPeriod'/>
+</div>
+            </div>
+            <center>
+                <br>
+                <button type="submit" id='updateBtn' class="btn btn-primary">
+                    Add Feature
+                </button>
+            </center>
+        </div>
+    </form>
+    <script src='../popup.js'></script>
+</body>
+
+</html>
+
+

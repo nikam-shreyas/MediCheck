@@ -1,0 +1,51 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Symptom/History</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <h4 class='bg-light text-primary p-3'>
+How long are the headaches lasting and how often they appear?
+</h4>
+        <br>
+    </center>
+    <form>
+        <div class="container mb-3">
+            <div class="form-row">
+                <div class="col-sm-12">
+                    <label class='text-secondary ml-1'>
+I wonder if you can pick the best answer describing your situation. It doesn't have to be exact science. Please take your time, it may seem somewhat complicated...</label><br /><select class='custom-select' id='fetchFeature'><option value="1" >Data unavailable.</option><option value="2" >I have had no headaches.</option><option value="3" >I have had headaches, and episodes last between 15 minutes to 3 hours, and occur for 6-12 weeks in a stretch (in a "cluster"), before they go away for some time.</option><option value="4" >I have had headaches, and episodes last betwen 4 to 72 hours.</option><option value="5" >I have had headaches, and episodes last between 30 minutes to 7 days, usually recur few times a month.</option><option value="6" >The headache I am having now, is the first such episode ever, so I can't tell yet how long will it last.</option></select><input type='hidden' id='feature' value='HeadacheTiming'/>
+</div>
+            </div>
+            <center>
+                <br>
+                <button type="submit" id='updateBtn' class="btn btn-primary">
+                    Add Feature
+                </button>
+            </center>
+        </div>
+    </form>
+    <script src='../popup.js'></script>
+</body>
+
+</html>
+
+

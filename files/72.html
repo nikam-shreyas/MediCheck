@@ -1,0 +1,51 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Symptom/History</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <h4 class='bg-light text-primary p-3'>
+What is the timing of dyspnea progression?
+</h4>
+        <br>
+    </center>
+    <form>
+        <div class="container mb-3">
+            <div class="form-row">
+                <div class="col-sm-12">
+                    <label class='text-secondary ml-1'>
+How fast did you shortness of breath progress (pick one that fits the best)?</label><br /><select class='custom-select' id='fetchFeature'><option value="1" >Data unavailable.</option><option value="2" >I have no shortness of breath at all.</option><option value="3" >My shortness of breath developed within last 1 hour. One hour ago I had no shortness of breath at all or almost at all.</option><option value="4" >My shortness of breath developed within last 1 to 23 hours. Before that I had no shortness of breath at all or almost at all.</option><option value="6" >My shortness of breath developed within last 1 to 7 days. Before that I had no shortness of breath at all or almost at all.</option><option value="7" >My shortness of breath developed within last 1 to 4 weeks. Before that I had no shortness of breath at all or almost at all.</option><option value="9" >My shortness of breath developed within months.</option></select><input type='hidden' id='feature' value='DyspneaProgressionSubjective'/>
+</div>
+            </div>
+            <center>
+                <br>
+                <button type="submit" id='updateBtn' class="btn btn-primary">
+                    Add Feature
+                </button>
+            </center>
+        </div>
+    </form>
+    <script src='../popup.js'></script>
+</body>
+
+</html>
+
+
