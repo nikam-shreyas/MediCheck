@@ -136,7 +136,6 @@ document.getElementById("suggestBtn").addEventListener("click", function () {
   );
   win.show();
 });
-
 document.getElementById("hospitalBtn").addEventListener("click", function () {
   let win = new BrowserWindow({
     frame: true,

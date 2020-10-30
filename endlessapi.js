@@ -132,6 +132,7 @@ async function analyze() {
           }
         }
       });
+
       display += "</div><script>collapser();</script>";
 
       document.getElementById("analysis").innerHTML = display;

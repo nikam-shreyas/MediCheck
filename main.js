@@ -47,7 +47,6 @@ app.on("activate", () => {
     createWindow();
   }
 });
-
 ipc.on("update-feature", function (event, arg) {
   win.webContents.send("updateFeatureSelectionList", arg);
 });
