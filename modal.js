@@ -119,5 +119,39 @@ document.getElementById("analyzeBtn").addEventListener("click", function () {
 });
 
 document.getElementById("suggestBtn").addEventListener("click", function () {
-  eapi.getSuggestedTests();
+  let win = new BrowserWindow({
+    frame: true,
+    webPreferences: {
+      nodeIntegration: true,
+      enableRemoteModule: true,
+    },
+  });
+  win.removeMenu();
+
+  win.on("close", function () {
+    win = null;
+  });
+  win.loadURL(
+    "https://www.google.com/search?sxsrf=ALeKk03DeWAm3YWVBEQTYWleXXn95IDZNg%3A1604042134746&ei=lr2bX4OWLaLhz7sPo6GpiA8&q=doctors+near+me&oq=doctors+near+me&gs_lcp=CgZwc3ktYWIQAzIICAAQsQMQkQIyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BAgAEEc6BAgjECc6DQgAELEDEMkDEBQQhwI6BQgAEJIDOgQIABBDOgoILhDHARCjAhBDOgcIABAUEIcCUNYbWPMkYL4maABwA3gBgAGTAogB_wuSAQUwLjUuM5gBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab&ved=0ahUKEwiDuZXN4tvsAhWi8HMBHaNQCvEQ4dUDCA0&uact=5"
+  );
+  win.show();
+});
+
+document.getElementById("hospitalBtn").addEventListener("click", function () {
+  let win = new BrowserWindow({
+    frame: true,
+    webPreferences: {
+      nodeIntegration: true,
+      enableRemoteModule: true,
+    },
+  });
+  win.removeMenu();
+
+  win.on("close", function () {
+    win = null;
+  });
+  win.loadURL(
+    "https://www.google.com/search?q=hospitals+near+me&oq=hospitals+near+me&aqs=chrome..69i57j0l7.2598j0j7&sourceid=chrome&ie=UTF-8"
+  );
+  win.show();
 });

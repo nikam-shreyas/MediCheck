@@ -103,6 +103,7 @@ async function analyze() {
     },
   })
     .then((response) => {
+      let count = 0;
       display =
         "<br /><div><button class='btn btn-block btn-light'>Probable Diseases:</button><br>";
       response["data"]["Diseases"].forEach((element) => {
@@ -110,19 +111,43 @@ async function analyze() {
           if (element.hasOwnProperty(k)) {
             const el = element[k];
             display +=
-              "<div class='m-1'>" +
+              "<div class='m-2 collapsible'>" +
               k +
               ": " +
               (el * 100).toFixed(2) +
               "%</div><div class='progress progress-secondary' style='height: 2px;'><div class='progress-bar' role='progressbar' style='width: 25%;' aria-valuenow='" +
               el * 100 +
-              " aria-valuemin='0' aria-valuemax='100'></div></div>";
+              " aria-valuemin='0' aria-valuemax='100'></div></div><div class='content'>";
+
+            response["data"]["VariableImportances"][count][k].forEach((i) => {
+              display +=
+                "<small><b>" +
+                i[0] +
+                "</b> </small><small class='mr-1'>(" +
+                (i[1] * 100).toFixed(2) +
+                "%)</small><br>";
+            });
+            display += "</div>";
+            count = count + 1;
           }
         }
       });
-      display += "</div>";
+      display += "</div><script>collapser();</script>";
 
       document.getElementById("analysis").innerHTML = display;
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
     })
     .catch((error) => {
       console.log(error);

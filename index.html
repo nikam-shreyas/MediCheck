@@ -36,12 +36,12 @@
 
             <b>Medical Healthcare System</b></a>
         <div class="mr-sm-2">
-            <button class="btn btn-outline-primary">Symptom Checker</button>
+            <button class="btn btn-outline-primary" id='hospitalBtn'>Hospitals Near Me</button>
             <button class="btn btn-primary" id='teamInfoBtn'>Team</button>
         </div>
     </nav>
     <div class="container">
-        
+
     </div>
     <div class="row m-3">
         <div class="col-sm-6" style="border-right: 1px solid gray;">
@@ -62,13 +62,31 @@
         <div class="col-sm-6">
             <div class="row">
                 <div class="col-sm-6">
-                    <button class="btn btn-primary btn-block" style="margin-top: 55px;" id='analyzeBtn'>Analyze Symptoms</button>
+                    <button class="btn btn-primary btn-block" style="margin-top: 55px;" id='analyzeBtn'>Analyze
+                        Symptoms</button>
                 </div>
                 <div class="col-sm-6">
-                    <button class="btn btn-outline-secondary btn-block" style="margin-top: 55px;" id='suggestBtn'>Get Suggested Tests</button>
+                    <button class="btn btn-outline-secondary btn-block" style="margin-top: 55px;" id='suggestBtn'>Get
+                        Doctors Near Me</button>
                 </div>
             </div>
             <div id='analysis'></div>
+            <style>
+                .collapsible{
+                    cursor:pointer;
+                }
+                .active{
+                    font-weight:bold;
+                }
+                .content {
+                    padding: 0 18px;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.5s ease-out;
+                    background-color: #f5f5f5;
+                }
+            </style>
+            
         </div>
     </div>
     <script src="modal.js"></script>
